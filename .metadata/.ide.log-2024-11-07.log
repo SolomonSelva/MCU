@@ -1,0 +1,85 @@
+2024-11-07 11:55:11,174 [INFO] WebApp:189 - Connection lost
+2024-11-07 11:55:11,527 [INFO] WebApp:186 - Connection restablished
+2024-11-07 11:55:13,479 [INFO] WebApp:189 - Connection lost
+2024-11-07 11:55:13,672 [INFO] WebApp:186 - Connection restablished
+2024-11-07 11:55:21,335 [INFO] WebApp:189 - Connection lost
+2024-11-07 11:55:21,491 [INFO] WebApp:186 - Connection restablished
+2024-11-07 11:55:24,430 [INFO] WebApp:189 - Connection lost
+2024-11-07 11:55:24,585 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:18:43,605 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:18:44,839 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:18:46,095 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:18:46,270 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:18:49,010 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:18:49,202 [INFO] WebApp:186 - Connection restablished
+2024-11-07 13:18:54,434 [INFO] WebApp:189 - Connection lost
+2024-11-07 13:18:54,598 [INFO] WebApp:186 - Connection restablished
+2024-11-07 14:13:49,520 [INFO] WebApp:189 - Connection lost
+2024-11-07 14:13:50,954 [INFO] WebApp:186 - Connection restablished
+2024-11-07 14:13:51,031 [INFO] WebApp:189 - Connection lost
+2024-11-07 14:13:51,209 [INFO] WebApp:186 - Connection restablished
+2024-11-07 14:13:54,993 [INFO] WebApp:189 - Connection lost
+2024-11-07 14:13:55,127 [INFO] WebApp:186 - Connection restablished
+2024-11-07 14:14:00,956 [INFO] WebApp:189 - Connection lost
+2024-11-07 14:14:01,176 [INFO] WebApp:186 - Connection restablished
+2024-11-07 15:41:14,776 [INFO] WebApp:189 - Connection lost
+2024-11-07 15:41:16,392 [INFO] WebApp:186 - Connection restablished
+2024-11-07 15:41:17,047 [INFO] WebApp:189 - Connection lost
+2024-11-07 15:41:17,195 [INFO] WebApp:186 - Connection restablished
+2024-11-07 15:41:19,944 [INFO] WebApp:189 - Connection lost
+2024-11-07 15:41:20,078 [INFO] WebApp:186 - Connection restablished
+2024-11-07 15:41:26,953 [INFO] WebApp:189 - Connection lost
+2024-11-07 15:41:27,082 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:56:30,602 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:56:32,089 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:56:33,228 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:56:33,381 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:56:36,314 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:56:36,772 [INFO] WebApp:186 - Connection restablished
+2024-11-07 17:56:41,963 [INFO] WebApp:189 - Connection lost
+2024-11-07 17:56:42,087 [INFO] WebApp:186 - Connection restablished
+2024-11-07 18:08:48,899 [INFO] MainUpdater:2873 - connection check result : 10
+2024-11-07 18:08:49,085 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-11-07 18:08:49,105 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2024-11-07 18:08:49,107 [INFO] FinderPluginLoader:95 - Searching for filters in installed packs
+2024-11-07 18:08:50,114 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2024-11-07 18:08:50,115 [INFO] DetailPanel:341 - Set advertising image to C:/Users/solom/STM32Cube/Repository/\en.prom-stm32c071-usb-memories-mcu-finder.png
+2024-11-07 18:08:54,074 [INFO] MultiScanPanel:200 - Auto-refresh data requested => check proxy status ongoing
+2024-11-07 18:08:54,211 [INFO] LoadUrlFilesThread:185 - End of LoadServerUrlFiles without Thread
+2024-11-07 18:08:54,211 [INFO] DetailPanel:341 - Set advertising image to C:/Users/solom/STM32Cube/Repository/\en.prom-stm32c071-usb-memories-mcu-finder.png
+2024-11-07 18:08:56,703 [INFO] ApiDb:581 - Connected to CubeFinder SQLite database (C:\Users\solom\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2024-11-07 18:09:35,017 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-11-07 18:09:35,020 [INFO] ApiDb:448 - Save user favorites file C:\Users\solom/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2024-11-07 18:09:35,021 [INFO] ApiDb:452 - User favorites MCUs=[]
+2024-11-07 18:09:35,023 [INFO] ApiDb:448 - Save user favorites file C:\Users\solom/.stm32cubeide/favorites.boards.txt: 1 item(s)
+2024-11-07 18:09:35,023 [INFO] ApiDb:452 - User favorites Boards=[NUCLEO-F446RE]
+2024-11-07 20:03:00,581 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:03:01,997 [INFO] WebApp:186 - Connection restablished
+2024-11-07 20:03:03,083 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:03:03,238 [INFO] WebApp:186 - Connection restablished
+2024-11-07 20:03:05,961 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:03:06,094 [INFO] WebApp:186 - Connection restablished
+2024-11-07 20:03:12,942 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:03:13,114 [INFO] WebApp:186 - Connection restablished
+2024-11-07 20:52:08,007 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:52:08,186 [INFO] WebApp:186 - Connection restablished
+2024-11-07 20:52:11,972 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:52:12,106 [INFO] WebApp:186 - Connection restablished
+2024-11-07 20:52:17,447 [INFO] WebApp:189 - Connection lost
+2024-11-07 20:52:17,582 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:20:44,584 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:20:45,887 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:20:47,104 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:20:47,253 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:20:49,457 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:20:49,616 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:20:56,927 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:20:57,067 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:34:26,485 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:34:27,718 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:34:28,969 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:34:29,101 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:34:31,929 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:34:32,064 [INFO] WebApp:186 - Connection restablished
+2024-11-07 21:34:37,940 [INFO] WebApp:189 - Connection lost
+2024-11-07 21:34:38,074 [INFO] WebApp:186 - Connection restablished

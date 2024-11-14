@@ -1,0 +1,84 @@
+/*
+ * stm32c031xx.h
+ *
+ *  Created on: Nov 5, 2024
+ *      Author: solom
+ */
+
+#ifndef INC_STM32C031XX_H_
+#define INC_STM32C031XX_H_
+
+#include <stdint.h>
+
+
+#define __vo volatile
+
+/* Memory base addresses */
+
+#define FLASH_BASEADDR						0x08000000U		// Base address of writable Flash memory(Main Flash)
+#define SRAM1_BASEADDR						0x20000000U		// Base address of SRAM base
+//#define SRAM2_BASEADDR
+#define ROM									0x1FFF 0000U    // System Memory is ROM
+#define SRAM								SRAM1		// Define SRAM1 as SRAM Base address
+
+/* Base addresses of Bus peripherals */
+
+#define PERIPH_BASEADDR 					0x4000 0000U	// APB peripheral base address
+#define APB1PERIPH_BASEADDR					PERIPH_BASEADDR		// Same as peripheral base
+#define APB2PERIPH_BASEADDR					0x4001 0000U	// Technically, there is only 1 APB bus. Divided into 2 here just for ease of defining.
+#define AHBPERIPH_BASEADDR					0x4002 0000U	// AHB peripheral base address
+#define IOPORT_BASEADDR						0x5000 0000U 	// In this MC, GPIO are connected directly to MP, Check RM.
+
+
+/* Base address of peripheral hanging on IO Port */
+
+
+#define GPIOA_BASEADDR						(IOPORT_BASEADDR + 0x0000)
+#define GPIOB_BASEADDR						(IOPORT_BASEADDR + 0x0400)
+#define GPIOC_BASEADDR						(IOPORT_BASEADDR + 0x0800)
+#define GPIOD_BASEADDR						(IOPORT_BASEADDR + 0x0C00)
+#define GPIOF_BASEADDR						(IOPORT_BASEADDR + 0x1400)
+
+/* Base address of peripherals hanging on AHB Bus */
+
+#define EXTI_BASEADDR						(AHBPERIPH_BASEADDR + 1800)
+
+/* Base address of peripherals hanging on APB Bus */
+
+/* Addresses with 0x4000 xxxx are termed as APB1 and Addresses with 0x4001 xxxx are termed as APB2,
+ * But infact there is only 1 APB bus
+ */
+
+#define I2C1_BASEADDR						(APB1PERIPH_BASEADDR + 5400)
+#define I2C2_BASEADDR						(APB1PERIPH_BASEADDR + 5800)
+
+#define SPI1_BASEADDR						(APB2PERIPH_BASEADDR + 3000)
+#define SPI2_BASEADDR						(APB1PERIPH_BASEADDR + 3000) 	// SPI2S1 is same as SPI2
+
+#define USART1_BASEADDR						(APB2PERIPH_BASEADDR + 3800)
+#define USART2_BASEADDR						(APB1PERIPH_BASEADDR + 4400)
+
+#define SYSCFG_BASEADDR						(APB2PERIPH_BASEADDR + 0000)
+
+
+/* Peripheral Register definition structures */
+
+typedef struct
+{
+	__vo uint32_t MODER;					//GPIO port mode register 				Address offset = 0x00
+	__vo uint32_t OTYPER;				//GPIO port output type register		Address offset = 0x04
+	__vo uint32_t OSPEEDR;				//GPIO port output speed register
+	__vo uint32_t PUPDR;					//GPIO port pull-up/pull-down register
+	__vo uint32_t IDR;					//GPIO port input data register
+	__vo uint32_t ODR;					//GPIO port output data register
+	__vo uint32_t BSRR;					//GPIO port bit set/reset register
+	__vo uint32_t LCKR;					//GPIO port configuration lock register
+	__vo uint32_t AFRL;					//GPIO alternate function low register
+	__vo uint32_t AFRH;					//GPIO alternate function high register
+	__vo uint32_t BRR;					//GPIO port bit reset register			Address offset = 0x28 to 0x2C
+
+}GPIO_RegDef_t;
+
+
+
+#endif /* INC_STM32C031XX_H_ */

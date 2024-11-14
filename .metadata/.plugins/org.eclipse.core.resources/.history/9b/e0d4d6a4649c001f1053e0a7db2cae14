@@ -1,0 +1,20 @@
+/*
+ * stm32c031xx.h
+ *
+ *  Created on: Nov 5, 2024
+ *      Author: solom
+ */
+
+#ifndef INC_STM32C031XX_H_
+#define INC_STM32C031XX_H_
+
+
+#define FLASH_BASEADDR						0x08000000U
+#define SRAM1_BASEADDR						0x20000000U
+//#define SRAM2_BASEADDR
+#define ROM									0x1FFF 0000U    // System Memory is ROM
+#define 									SRAM SRAM1
+
+
+
+#endif /* INC_STM32C031XX_H_ */

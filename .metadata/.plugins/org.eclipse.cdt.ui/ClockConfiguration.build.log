@@ -1,0 +1,17 @@
+19:55:42 **** Incremental Build of configuration Debug for project ClockConfiguration ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ClockConfiguration.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Solomon\SelfLearning\Udemy\MCU\ClockConfiguration\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ClockConfiguration.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ClockConfiguration.elf
+ 
+arm-none-eabi-size  ClockConfiguration.elf 
+arm-none-eabi-objdump -h -S ClockConfiguration.elf  > "ClockConfiguration.list"
+   text	   data	    bss	    dec	    hex	filename
+    508	      0	   1568	   2076	    81c	ClockConfiguration.elf
+Finished building: default.size.stdout
+ 
+Finished building: ClockConfiguration.list
+ 
+
+19:55:42 Build Finished. 0 errors, 0 warnings. (took 758ms)
+

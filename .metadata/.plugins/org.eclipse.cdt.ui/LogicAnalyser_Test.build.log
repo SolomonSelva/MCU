@@ -1,0 +1,10 @@
+16:59:57 **** Incremental Build of configuration Debug for project LogicAnalyser_Test ****
+make -j8 all 
+arm-none-eabi-size  LogicAnalyser_Test.elf 
+   text	   data	    bss	    dec	    hex	filename
+    564	      0	   1568	   2132	    854	LogicAnalyser_Test.elf
+Finished building: default.size.stdout
+ 
+
+16:59:57 Build Finished. 0 errors, 0 warnings. (took 355ms)
+

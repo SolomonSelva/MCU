@@ -1,0 +1,18 @@
+12:14:50 **** Incremental Build of configuration Debug for project STM32C031XX_drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../drivers/Src/stm32c031xx_gpio_driver.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32C031XX_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/Src/stm32c031xx_gpio_driver.d" -MT"drivers/Src/stm32c031xx_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "drivers/Src/stm32c031xx_gpio_driver.o"
+arm-none-eabi-gcc "../Src/003_Button_Interrupt.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32C031XX_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/003_Button_Interrupt.d" -MT"Src/003_Button_Interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/003_Button_Interrupt.o"
+arm-none-eabi-gcc -o "STM32C031XX_drivers.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Solomon\SelfLearning\Udemy\MCU\STM32C031XX_drivers\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32C031XX_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32C031XX_drivers.elf
+ 
+arm-none-eabi-size  STM32C031XX_drivers.elf 
+arm-none-eabi-objdump -h -S STM32C031XX_drivers.elf  > "STM32C031XX_drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   2220	      0	   1568	   3788	    ecc	STM32C031XX_drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32C031XX_drivers.list
+ 
+
+12:14:51 Build Finished. 0 errors, 0 warnings. (took 852ms)
+
