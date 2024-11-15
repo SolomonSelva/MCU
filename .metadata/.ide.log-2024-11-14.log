@@ -1,0 +1,19 @@
+2024-11-14 11:39:50,782 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-14 11:39:52,908 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-14 13:16:16,746 [INFO] WebApp:189 - Connection lost
+2024-11-14 13:16:17,256 [INFO] WebApp:186 - Connection restablished
+2024-11-14 13:16:17,348 [INFO] WebApp:189 - Connection lost
+2024-11-14 13:16:17,577 [INFO] WebApp:186 - Connection restablished
+2024-11-14 13:16:18,281 [INFO] WebApp:189 - Connection lost
+2024-11-14 13:16:19,495 [INFO] WebApp:186 - Connection restablished
+2024-11-14 13:16:19,873 [INFO] WebApp:189 - Connection lost
+2024-11-14 13:16:20,008 [INFO] WebApp:186 - Connection restablished
+2024-11-14 13:16:25,364 [INFO] WebApp:189 - Connection lost
+2024-11-14 13:16:25,492 [INFO] WebApp:186 - Connection restablished
+2024-11-14 13:45:10,173 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out
+2024-11-14 14:59:51,426 [INFO] WebApp:189 - Connection lost
+2024-11-14 14:59:51,677 [INFO] WebApp:186 - Connection restablished
+2024-11-14 14:59:55,360 [INFO] WebApp:189 - Connection lost
+2024-11-14 14:59:55,502 [INFO] WebApp:186 - Connection restablished
+2024-11-14 15:00:00,371 [INFO] WebApp:189 - Connection lost
+2024-11-14 15:00:00,532 [INFO] WebApp:186 - Connection restablished
