@@ -1,0 +1,10 @@
+17:42:02 **** Incremental Build of configuration Debug for project STM32F767XX_drivers ****
+make -j8 all 
+arm-none-eabi-size  STM32F767XX_drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5128	     92	   1900	   7120	   1bd0	STM32F767XX_drivers.elf
+Finished building: default.size.stdout
+ 
+
+17:42:03 Build Finished. 0 errors, 0 warnings. (took 340ms)
+

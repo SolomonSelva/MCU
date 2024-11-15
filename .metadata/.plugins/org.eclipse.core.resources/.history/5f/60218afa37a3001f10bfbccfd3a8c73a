@@ -1,0 +1,13 @@
+/*
+ * stm32f767xx.h
+ *
+ *  Created on: Nov 15, 2024
+ *      Author: solom
+ */
+
+#ifndef STM32F767XX_H_
+#define STM32F767XX_H_
+
+
+
+#endif /* STM32F767XX_H_ */
