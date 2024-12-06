@@ -1,5 +1,7 @@
-"./Src/001_LED_Toggle.o"
+"./Src/007_SPI_Rx_Master_IT.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Startup/startup_stm32f767zitx.o"
+"./drivers/Src/stm32f767xx_dwt_driver.o"
 "./drivers/Src/stm32f767xx_gpio_driver.o"
+"./drivers/Src/stm32f767xx_spi_driver.o"

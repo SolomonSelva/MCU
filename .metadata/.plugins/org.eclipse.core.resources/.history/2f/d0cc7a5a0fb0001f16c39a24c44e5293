@@ -1,0 +1,32 @@
+/*
+ * 004_SPI_Tx.c
+ *
+ *  Created on: Nov 28, 2024
+ *      Author: solom
+ */
+
+#include "stm32f767xx.h"
+
+/*
+ * WHen AF is 5:
+ * PB12 -> SPI2_NSS
+ * PB13 -> SPI2_SCK
+ * PB14 -> SPI2_MISO
+ * PB15 -> SPI2_MOSI
+ */
+
+
+void SPI_GpioInit(void)
+{
+	GPIO_Handle_t SPI_Pins;
+	SPI_Pins.pGPIOx = GPIOA;
+	SPI_Pins.GPIOPinConfig.GPIO_PinMode = GPIO_MODE
+}
+
+int main ()
+{
+	// function to initailaise GPIO pins as SPI2
+	SPI_GpioInit();
+
+	return 0;
+}

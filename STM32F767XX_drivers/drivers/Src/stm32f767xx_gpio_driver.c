@@ -132,6 +132,9 @@ void SYSCFG_PeriClkControl (uint8_t EnOrDi)
 void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
 {
 
+	// Enable the peripheral clock, so that it is not required by the user to manually write it.
+	GPIO_PeriClkControl(pGPIOHandle->pGPIOx, ENABLE);
+
 	uint32_t temp = 0; //temporary register
 
 	//1. Configure the mode of GPIO pin
@@ -402,4 +405,5 @@ void GPIO_IRQHandling(uint8_t PinNumber)
 
 
 }
+
 

@@ -1,0 +1,15 @@
+16:44:04 **** Incremental Build of configuration Debug for project STM32F767XX_Execution_Time ****
+make -j8 all 
+arm-none-eabi-gcc "../drivers/Src/stm32f767xx_dwt_driver.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F767ZI -DSTM32F7 -DSTM32F767ZITx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_Execution_Time/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/Src/stm32f767xx_dwt_driver.d" -MT"drivers/Src/stm32f767xx_dwt_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "drivers/Src/stm32f767xx_dwt_driver.o"
+arm-none-eabi-gcc "../drivers/Src/stm32f767xx_gpio_driver.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F767ZI -DSTM32F7 -DSTM32F767ZITx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_Execution_Time/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"drivers/Src/stm32f767xx_gpio_driver.d" -MT"drivers/Src/stm32f767xx_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "drivers/Src/stm32f767xx_gpio_driver.o"
+arm-none-eabi-gcc -mcpu=cortex-m7 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f767zitx.d" -MT"Startup/startup_stm32f767zitx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f767zitx.o" "../Startup/startup_stm32f767zitx.s"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F767ZI -DSTM32F7 -DSTM32F767ZITx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_Execution_Time/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F767ZI -DSTM32F7 -DSTM32F767ZITx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_Execution_Time/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "STM32F767XX_Execution_Time.elf" @"objects.list" D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_Execution_Time/Obj/xx1_Execution_Time_Profiling.o  -mcpu=cortex-m7 -T"D:\Solomon\SelfLearning\Udemy\MCU\STM32F767XX_Execution_Time\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F767XX_Execution_Time.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_Execution_Time/Obj/xx1_Execution_Time_Profiling.o: file not recognized: file format not recognized
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: STM32F767XX_Execution_Time.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+16:44:05 Build Failed. 1 errors, 0 warnings. (took 860ms)
+

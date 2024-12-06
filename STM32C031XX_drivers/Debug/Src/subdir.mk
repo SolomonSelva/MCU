@@ -5,17 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/003_Button_Interrupt.c \
+../Src/006_SPI_Tx_Rx_Command_Slave.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
 
 OBJS += \
-./Src/003_Button_Interrupt.o \
+./Src/006_SPI_Tx_Rx_Command_Slave.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
 
 C_DEPS += \
-./Src/003_Button_Interrupt.d \
+./Src/006_SPI_Tx_Rx_Command_Slave.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
 
@@ -27,7 +27,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/003_Button_Interrupt.cyclo ./Src/003_Button_Interrupt.d ./Src/003_Button_Interrupt.o ./Src/003_Button_Interrupt.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/006_SPI_Tx_Rx_Command_Slave.cyclo ./Src/006_SPI_Tx_Rx_Command_Slave.d ./Src/006_SPI_Tx_Rx_Command_Slave.o ./Src/006_SPI_Tx_Rx_Command_Slave.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

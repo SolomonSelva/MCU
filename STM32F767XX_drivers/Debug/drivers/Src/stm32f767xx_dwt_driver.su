@@ -1,0 +1,2 @@
+../drivers/Src/stm32f767xx_dwt_driver.c:14:6:DWT_CYCCNT_EN	4	static
+../drivers/Src/stm32f767xx_dwt_driver.c:24:6:GPIO_LED_INIT	24	static

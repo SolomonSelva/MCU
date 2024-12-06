@@ -2,15 +2,17 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32C031XX_drivers Debug,org.eclipse.launchbar.core.descriptorType.default\:STM32F767XX_drivers Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F767XX_drivers Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ClockConfiguration\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ClockConfiguration\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Lesson1\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Lesson1\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LogicAnalyser_Test\ Debug/activeLaunchMode=debug
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32C031XX_drivers\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32C031XX_drivers\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32C031XX_drivers\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F767XX_drivers\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F767XX_drivers\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:STM32F767XX_drivers/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:ClockConfiguration\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:ClockConfiguration\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
@@ -20,5 +22,7 @@ org.eclipse.launchbar.core.descriptorType.default\:LogicAnalyser_Test\ Debug/act
 org.eclipse.launchbar.core.descriptorType.default\:LogicAnalyser_Test\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:STM32C031XX_drivers\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:STM32C031XX_drivers\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:STM32F767XX_Execution_Time\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:STM32F767XX_drivers\ Debug\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:STM32F767XX_drivers\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:STM32F767XX_drivers\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

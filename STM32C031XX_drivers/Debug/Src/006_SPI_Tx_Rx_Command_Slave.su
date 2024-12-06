@@ -1,0 +1,6 @@
+../Src/006_SPI_Tx_Rx_Command_Slave.c:29:6:delay	16	static
+../Src/006_SPI_Tx_Rx_Command_Slave.c:43:6:SPI1_GpioInit	24	static
+../Src/006_SPI_Tx_Rx_Command_Slave.c:71:6:SPI1_Init	40	static
+../Src/006_SPI_Tx_Rx_Command_Slave.c:87:6:GPIOButton_Init	24	static
+../Src/006_SPI_Tx_Rx_Command_Slave.c:107:6:GPIOLed_Init	24	static
+../Src/006_SPI_Tx_Rx_Command_Slave.c:129:5:main	16	static

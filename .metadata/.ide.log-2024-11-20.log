@@ -1,0 +1,10 @@
+2024-11-20 22:23:53,617 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-11-20 22:24:00,886 [INFO] ProjectBuilder:5097 - Time for Generating toolchain IDE Files: 9127mS.
+2024-11-20 22:24:00,887 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 1mS.
+2024-11-20 22:24:00,891 [INFO] ProjectBuilder:3107 - Time for Copy CMSIS : 0mS.
+2024-11-20 22:24:02,519 [INFO] McuFinderGlobals:76 - Set McuFinderConnectedMode to true
+2024-11-20 22:24:02,526 [INFO] ApiDb:448 - Save user favorites file C:\Users\solom/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2024-11-20 22:24:02,526 [INFO] ApiDb:452 - User favorites MCUs=[]
+2024-11-20 22:24:02,529 [INFO] ApiDb:448 - Save user favorites file C:\Users\solom/.stm32cubeide/favorites.boards.txt: 1 item(s)
+2024-11-20 22:24:02,529 [INFO] ApiDb:452 - User favorites Boards=[NUCLEO-F446RE]
+2024-11-20 22:24:54,702 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA

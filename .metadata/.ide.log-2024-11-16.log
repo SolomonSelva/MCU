@@ -1,0 +1,43 @@
+2024-11-16 15:33:39,829 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:33:58,666 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:33:59,813 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:34:00,904 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:34:04,700 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:34:08,126 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:34:37,068 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:44:37,944 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:44:51,855 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:44:53,092 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:44:56,614 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:44:59,413 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:45:08,876 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:45:11,116 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2024-11-16 15:45:11,957 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2024-11-16 15:53:58,522 [INFO] WebApp:189 - Connection lost
+2024-11-16 15:54:00,642 [INFO] WebApp:186 - Connection restablished
+2024-11-16 15:54:01,025 [INFO] WebApp:189 - Connection lost
+2024-11-16 15:54:01,198 [INFO] WebApp:186 - Connection restablished
+2024-11-16 15:54:02,878 [INFO] WebApp:189 - Connection lost
+2024-11-16 15:54:03,010 [INFO] WebApp:186 - Connection restablished
+2024-11-16 15:54:05,992 [INFO] WebApp:189 - Connection lost
+2024-11-16 15:54:06,124 [INFO] WebApp:186 - Connection restablished
+2024-11-16 15:54:09,363 [INFO] WebApp:189 - Connection lost
+2024-11-16 15:54:09,491 [INFO] WebApp:186 - Connection restablished
+2024-11-16 17:23:50,576 [INFO] WebApp:189 - Connection lost
+2024-11-16 17:23:52,089 [INFO] WebApp:186 - Connection restablished
+2024-11-16 17:23:54,934 [INFO] WebApp:189 - Connection lost
+2024-11-16 17:23:55,066 [INFO] WebApp:186 - Connection restablished
+2024-11-16 17:23:58,046 [INFO] WebApp:189 - Connection lost
+2024-11-16 17:23:58,183 [INFO] WebApp:186 - Connection restablished
+2024-11-16 17:24:01,953 [INFO] WebApp:189 - Connection lost
+2024-11-16 17:24:02,090 [INFO] WebApp:186 - Connection restablished
+2024-11-16 20:46:31,069 [INFO] WebApp:189 - Connection lost
+2024-11-16 20:46:32,596 [INFO] WebApp:186 - Connection restablished
+2024-11-16 20:46:32,666 [INFO] WebApp:189 - Connection lost
+2024-11-16 20:46:32,802 [INFO] WebApp:186 - Connection restablished
+2024-11-16 20:46:34,451 [INFO] WebApp:189 - Connection lost
+2024-11-16 20:46:34,610 [INFO] WebApp:186 - Connection restablished
+2024-11-16 23:10:38,647 [INFO] WebApp:189 - Connection lost
+2024-11-16 23:10:53,259 [INFO] WebApp:186 - Connection restablished
+2024-11-16 23:28:43,822 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-16 23:28:43,892 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32F767XX_drivers/Src/002_ExecutionTime_Test_instrumented.c&apos; to &apos;002_ExecutionTime_Simple_instrumented.c&apos;" description="Rename resource &apos;002_ExecutionTime_Test_instrumented.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/002_ExecutionTime_Test_instrumented.c" name="002_ExecutionTime_Simple_instrumented.c" stamp="1732103376946" updateReferences="true"/>
+</session>

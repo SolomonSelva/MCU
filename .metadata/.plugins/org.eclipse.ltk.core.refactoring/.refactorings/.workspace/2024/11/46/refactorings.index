@@ -2,3 +2,4 @@
 1731669423658	Delete resource 'STM32F767XX_drivers/drivers'
 1731669549080	Delete resource 'STM32F767XX_drivers/Inc/stm32f767xx.h'
 1731674822562	Delete resource 'STM32F767XX_drivers/Src/main.c'
+1731765757516	Delete resource 'STM32F767XX_drivers/drivers/Src/stm32f767xx_DWT_driver.c'

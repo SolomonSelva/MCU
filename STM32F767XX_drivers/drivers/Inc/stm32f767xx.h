@@ -10,9 +10,11 @@
 
 
 #include <stdint.h>
+#include <stddef.h>
 
 
 #define __vo volatile
+#define __weak __attribute__((weak))
 
 
 /* Processor specific addresses */
@@ -31,6 +33,12 @@
 #define NVIC_IPR_BASE_ADDR							((__vo uint32_t *) 0xE000E400 )
 
 #define NO_PR_BITS_IMPLEMENTED						4
+
+#define DEMCR_BASE_ADDR									((__vo uint32_t *) 0xE000EDFC )
+
+#define DWT_CTRL_BASE_ADDR								((__vo uint32_t *) 0xE0001000)
+
+#define DWT_CYCCNT_BASE_ADDR							((__vo uint32_t *) 0xE0001004)
 
 
 
@@ -216,6 +224,28 @@ typedef struct
 }SYSCFG_RegDef_t;
 
 
+/* Peripheral regsiter structure of SYSCFG */
+typedef struct
+{
+	__vo uint32_t CR1;
+	__vo uint32_t CR2;
+	__vo uint32_t SR;
+	__vo uint32_t DR;
+	__vo uint32_t CRCPR;
+	__vo uint32_t RXCRCR;
+	__vo uint32_t TXCRCR;
+	__vo uint32_t I2SCFGR;
+	__vo uint32_t I2SPR;
+
+}SPI_RegDef_t;
+
+#define SPI1							((SPI_RegDef_t*)SPI1_BASEADDR)
+#define SPI2							((SPI_RegDef_t*)SPI2_BASEADDR)
+#define SPI3							((SPI_RegDef_t*)SPI3_BASEADDR)
+#define SPI4							((SPI_RegDef_t*)SPI4_BASEADDR)
+#define SPI5							((SPI_RegDef_t*)SPI5_BASEADDR)
+#define SPI6							((SPI_RegDef_t*)SPI6_BASEADDR)
+
 /* CLock enable macros for GPIO peripherals */
 
 #define GPIOA_PCLK_EN()					(RCC->AHB1ENR |= (1 << 0))
@@ -346,10 +376,19 @@ typedef struct
 #define IRQ_NO_EXTI9_5					23
 #define IRQ_NO_EXTI15_10				40
 
+#define IRQ_SPI1						35
+#define IRQ_SPI2						36
+#define IRQ_SPI3						51
+#define IRQ_SPI4						84
+#define IRQ_SPI5						85
+#define IRQ_SPI6						86
+
+
 /* Macros for IRQ priority */
 
 #define IRQ_PRIO_3						3
 #define IRQ_PRIO_14						14
+#define IRQ_PRIO_15						15
 
 
 /* Generic Macros */
@@ -360,6 +399,67 @@ typedef struct
 #define RESET								DISABLE
 #define GPIO_PIN_SET						SET
 #define GPIO_PIN_RESET						RESET
+#define FLAG_RESET							RESET
+#define FLAG_SET								SET
+
+/* SPI Register Bits */
+
+/* SPI CR1 Register Bits */
+
+#define SPIx_CR1_CPHA						0
+#define SPIx_CR1_CPOL						1
+#define SPIx_CR1_MSTR						2
+#define SPIx_CR1_BR							3
+#define SPIx_CR1_SPE						6
+#define SPIx_CR1_LSBFIRST					7
+#define SPIx_CR1_SSI						8
+#define SPIx_CR1_SSM						9
+#define SPIx_CR1_RXONLY						10
+#define SPIx_CR1_CRCL						11
+#define SPIx_CR1_CRCNEXT					12
+#define SPIx_CR1_CRCEN						13
+#define SPIx_CR1_BIDIOE						14
+#define SPIx_CR1_BIDIMODE					15
+
+
+/* SPI CR2 Register Bits */
+
+#define SPIx_CR2_RXDMAEN						0
+#define SPIx_CR2_TXDMAEN						1
+#define SPIx_CR2_SSOE							2
+#define SPIx_CR2_NSSP							3
+#define SPIx_CR2_FRF							4
+#define SPIx_CR2_ERRIE							5
+#define SPIx_CR2_RXNEIE							6
+#define SPIx_CR2_TXEIE							7
+#define SPIx_CR2_DS								8
+#define SPIx_CR2_FRXTH							12
+#define SPIx_CR2_LDMA_RX						13
+#define SPIx_CR2_LDMA_TX						14
+
+
+/* SPI SR Register Bits */
+
+#define SPIx_SR_RXNE						0
+#define SPIx_SR_TXE							1
+#define SPIx_SR_CHSIDE						2
+#define SPIx_SR_UDR							3
+#define SPIx_SR_CRCERR						4
+#define SPIx_SR_MODF						5
+#define SPIx_SR_OVR							6
+#define SPIx_SR_BSY							7
+#define SPIx_SR_FRE							8
+#define SPIx_SR_FRLVL						9
+#define SPIx_SR_FTLVL						11
+
+
+/* GPIO Port Reset macros */
+#define SPI1_REG_RST()					do { (RCC->APB2RSTR |= (1 << 12));	(RCC->AHB1RSTR &= ~(1 << 12));} while (0) // setting and resetting the bit.
+#define SPI2_REG_RST()					do { (RCC->APB1RSTR |= (1 << 14));	(RCC->APB1RSTR &= ~(1 << 14));} while (0)
+#define SPI3_REG_RST()					do { (RCC->APB1RSTR |= (1 << 15));	(RCC->APB1RSTR &= ~(1 << 15));} while (0)
+#define SPI4_REG_RST()					do { (RCC->APB2RSTR |= (1 << 13));	(RCC->APB2RSTR &= ~(1 << 13));} while (0)
+#define SPI5_REG_RST()					do { (RCC->APB2RSTR |= (1 << 20));	(RCC->APB2RSTR &= ~(1 << 20));} while (0)
+#define SPI6_REG_RST()					do { (RCC->APB2RSTR |= (1 << 21));	(RCC->APB2RSTR &= ~(1 << 21));} while (0)
 
 
 

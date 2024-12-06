@@ -5,17 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/001_LED_Toggle.c \
+../Src/007_SPI_Rx_Master_IT.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
 
 OBJS += \
-./Src/001_LED_Toggle.o \
+./Src/007_SPI_Rx_Master_IT.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
 
 C_DEPS += \
-./Src/001_LED_Toggle.d \
+./Src/007_SPI_Rx_Master_IT.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
 
@@ -27,7 +27,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/001_LED_Toggle.cyclo ./Src/001_LED_Toggle.d ./Src/001_LED_Toggle.o ./Src/001_LED_Toggle.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/007_SPI_Rx_Master_IT.cyclo ./Src/007_SPI_Rx_Master_IT.d ./Src/007_SPI_Rx_Master_IT.o ./Src/007_SPI_Rx_Master_IT.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

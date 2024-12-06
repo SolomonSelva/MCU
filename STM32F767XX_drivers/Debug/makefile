@@ -61,7 +61,7 @@ main-build: STM32F767XX_drivers.elf secondary-outputs
 
 # Tool invocations
 STM32F767XX_drivers.elf STM32F767XX_drivers.map: $(OBJS) $(USER_OBJS) D:\Solomon\SelfLearning\Udemy\MCU\STM32F767XX_drivers\STM32F767ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32F767XX_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\Solomon\SelfLearning\Udemy\MCU\STM32F767XX_drivers\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F767XX_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "STM32F767XX_drivers.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"D:\Solomon\SelfLearning\Udemy\MCU\STM32F767XX_drivers\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F767XX_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
