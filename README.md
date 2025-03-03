@@ -9,7 +9,7 @@ The repository serves as a resource for embedded systems enthusiasts and profess
 
 ## Features
 - **GPIO Driver**: Configure pins as input/output, with options for pull-up, pull-down, and speed settings.
-- **UART Driver**: Enable asynchronous communication with configurable baud rate, parity, and stop bits. (Will be implemented soon)
+- **UART Driver**: Enable asynchronous communication with configurable baud rate, parity, and stop bits.
 - **SPI Driver**: Support full-duplex and half-duplex communication modes with flexible clock configurations.
 - **Timer APIs**: Generate PWM signals and implement precise delays using timers. (Will be implemented soon)
 - **I2C Driver**: Facilitate communication with I2C-compatible devices, supporting master mode and various addressing schemes. (Will be implemented soon)
