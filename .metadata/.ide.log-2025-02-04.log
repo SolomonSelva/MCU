@@ -1,0 +1,4 @@
+2025-02-05 00:35:35,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 0:35:34.801 ERROR Chromium process exit code: -1,073,741,819
+2025-02-05 00:35:36,994 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-02-05 00:35:37,013 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 0:35:37.006 ERROR Crash dump dir: C:\Users\solom\AppData\Local\JxBrowser\7.39.2\CrashReports
+2025-02-05 00:35:37,013 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

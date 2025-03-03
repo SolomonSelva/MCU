@@ -1,0 +1,12 @@
+../drivers/Src/stm32f767xx_usart_driver.c:26:6:USART_Init	24	static
+../drivers/Src/stm32f767xx_usart_driver.c:138:6:USART_SetBaudRate	40	static
+../drivers/Src/stm32f767xx_usart_driver.c:183:6:USART_PeriClkControl	16	static
+../drivers/Src/stm32f767xx_usart_driver.c:270:6:USART_PeripheralControl	16	static
+../drivers/Src/stm32f767xx_usart_driver.c:283:6:USART_IRQConfig	24	static
+../drivers/Src/stm32f767xx_usart_driver.c:363:6:USART_IRQHandling	32	static
+../drivers/Src/stm32f767xx_usart_driver.c:669:9:USART_GetFlagStatus	16	static
+../drivers/Src/stm32f767xx_usart_driver.c:677:6:USART_ClearFlagStatus	16	static
+../drivers/Src/stm32f767xx_usart_driver.c:698:6:USART_SendData	32	static
+../drivers/Src/stm32f767xx_usart_driver.c:760:6:USART_ReceiveData	32	static
+../drivers/Src/stm32f767xx_usart_driver.c:838:9:USART_SendDataIT	32	static
+../drivers/Src/stm32f767xx_usart_driver.c:877:9:USART_ReceiveDataIT	32	static

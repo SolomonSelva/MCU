@@ -5,19 +5,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../drivers/Src/stm32f767xx_dwt_driver.c \
 ../drivers/Src/stm32f767xx_gpio_driver.c \
-../drivers/Src/stm32f767xx_spi_driver.c 
+../drivers/Src/stm32f767xx_rcc_driver.c \
+../drivers/Src/stm32f767xx_spi_driver.c \
+../drivers/Src/stm32f767xx_usart_driver.c 
 
 OBJS += \
-./drivers/Src/stm32f767xx_dwt_driver.o \
 ./drivers/Src/stm32f767xx_gpio_driver.o \
-./drivers/Src/stm32f767xx_spi_driver.o 
+./drivers/Src/stm32f767xx_rcc_driver.o \
+./drivers/Src/stm32f767xx_spi_driver.o \
+./drivers/Src/stm32f767xx_usart_driver.o 
 
 C_DEPS += \
-./drivers/Src/stm32f767xx_dwt_driver.d \
 ./drivers/Src/stm32f767xx_gpio_driver.d \
-./drivers/Src/stm32f767xx_spi_driver.d 
+./drivers/Src/stm32f767xx_rcc_driver.d \
+./drivers/Src/stm32f767xx_spi_driver.d \
+./drivers/Src/stm32f767xx_usart_driver.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +30,7 @@ drivers/Src/%.o drivers/Src/%.su drivers/Src/%.cyclo: ../drivers/Src/%.c drivers
 clean: clean-drivers-2f-Src
 
 clean-drivers-2f-Src:
-	-$(RM) ./drivers/Src/stm32f767xx_dwt_driver.cyclo ./drivers/Src/stm32f767xx_dwt_driver.d ./drivers/Src/stm32f767xx_dwt_driver.o ./drivers/Src/stm32f767xx_dwt_driver.su ./drivers/Src/stm32f767xx_gpio_driver.cyclo ./drivers/Src/stm32f767xx_gpio_driver.d ./drivers/Src/stm32f767xx_gpio_driver.o ./drivers/Src/stm32f767xx_gpio_driver.su ./drivers/Src/stm32f767xx_spi_driver.cyclo ./drivers/Src/stm32f767xx_spi_driver.d ./drivers/Src/stm32f767xx_spi_driver.o ./drivers/Src/stm32f767xx_spi_driver.su
+	-$(RM) ./drivers/Src/stm32f767xx_gpio_driver.cyclo ./drivers/Src/stm32f767xx_gpio_driver.d ./drivers/Src/stm32f767xx_gpio_driver.o ./drivers/Src/stm32f767xx_gpio_driver.su ./drivers/Src/stm32f767xx_rcc_driver.cyclo ./drivers/Src/stm32f767xx_rcc_driver.d ./drivers/Src/stm32f767xx_rcc_driver.o ./drivers/Src/stm32f767xx_rcc_driver.su ./drivers/Src/stm32f767xx_spi_driver.cyclo ./drivers/Src/stm32f767xx_spi_driver.d ./drivers/Src/stm32f767xx_spi_driver.o ./drivers/Src/stm32f767xx_spi_driver.su ./drivers/Src/stm32f767xx_usart_driver.cyclo ./drivers/Src/stm32f767xx_usart_driver.d ./drivers/Src/stm32f767xx_usart_driver.o ./drivers/Src/stm32f767xx_usart_driver.su
 
 .PHONY: clean-drivers-2f-Src
 

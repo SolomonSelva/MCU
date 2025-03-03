@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;STM32F767XX_drivers/Src/009_USART_TX_Arduino&apos; to &apos;009_USART_TX_Arduino.c&apos;" description="Rename resource &apos;009_USART_TX_Arduino&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Src/009_USART_TX_Arduino" name="009_USART_TX_Arduino.c" stamp="1738635569483" updateReferences="true"/>
+</session>

@@ -5,17 +5,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/007_SPI_Rx_Master_IT.c \
+../Src/0010_USART_Case_Arduino.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c 
 
 OBJS += \
-./Src/007_SPI_Rx_Master_IT.o \
+./Src/0010_USART_Case_Arduino.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o 
 
 C_DEPS += \
-./Src/007_SPI_Rx_Master_IT.d \
+./Src/0010_USART_Case_Arduino.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d 
 
@@ -27,7 +27,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/007_SPI_Rx_Master_IT.cyclo ./Src/007_SPI_Rx_Master_IT.d ./Src/007_SPI_Rx_Master_IT.o ./Src/007_SPI_Rx_Master_IT.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/0010_USART_Case_Arduino.cyclo ./Src/0010_USART_Case_Arduino.d ./Src/0010_USART_Case_Arduino.o ./Src/0010_USART_Case_Arduino.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

@@ -1,0 +1,74 @@
+
+#ifndef __CYCLE_PROFILING__
+#define __CYCLE_PROFILING__
+#include <stdint.h>
+#include <stdio.h>
+#include "stm32f767xx.h"
+#include "stm32f767xx_dwt_driver.h"
+
+// Function to enable DWT_CYCCNT before main
+__attribute__((constructor))
+void initDWT() {
+	DWT_CYCCNT_EN();
+}
+#endif
+/*
+ * 002_ExecutionTime_Test.c
+ *
+ *  Created on: Nov 17, 2024
+ *      Author: root
+ */
+
+#include <stdio.h>
+#include "stm32f767xx.h"
+#include "stm32f767xx_dwt_driver.h"
+
+int fastFunction() {
+	uint32_t start_cycle = *DWT_CYCCNT_BASE_ADDR;
+
+	int sum = 0;
+	for (int i = 0; i < 1000; i++) {
+		sum += i;
+	}
+	printf("Sum in fastFunction: %d\n", sum);
+
+	uint32_t end_cycle = *DWT_CYCCNT_BASE_ADDR;
+	uint32_t cycle_diff = end_cycle - start_cycle;
+	double time_seconds = (double)cycle_diff / C_SystemCoreClock;
+	printf("Function %s took %u cycles (%f seconds)\n", __FUNCTION__, cycle_diff, time_seconds);
+	return 0;
+
+}
+
+void slowFunction() {
+	uint32_t start_cycle = *DWT_CYCCNT_BASE_ADDR;
+
+	long long sum = 0;
+	for (long long i = 0; i < 100000000; i++) {
+		sum += i;
+	}
+	printf("Sum in slowFunction: %lld\n", sum);
+
+	uint32_t end_cycle = *DWT_CYCCNT_BASE_ADDR;
+	uint32_t cycle_diff = end_cycle - start_cycle;
+	double time_seconds = (double)cycle_diff / C_SystemCoreClock;
+	printf("Function %s took %u cycles (%f seconds)\n", __FUNCTION__, cycle_diff, time_seconds);
+}
+
+int main() {
+	uint32_t start_cycle = *DWT_CYCCNT_BASE_ADDR;
+
+	printf("Starting program...\n");
+
+
+	fastFunction();
+	slowFunction();
+
+	printf("Program finished.\n");
+
+	uint32_t end_cycle = *DWT_CYCCNT_BASE_ADDR;
+	uint32_t cycle_diff = end_cycle - start_cycle;
+	double time_seconds = (double)cycle_diff / C_SystemCoreClock;
+	printf("Function %s took %u cycles (%f seconds)\n", __FUNCTION__, cycle_diff, time_seconds);
+	return 0;
+}

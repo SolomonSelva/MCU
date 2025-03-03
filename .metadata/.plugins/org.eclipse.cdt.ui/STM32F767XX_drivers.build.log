@@ -1,25 +1,27 @@
-13:56:55 **** Incremental Build of configuration Debug for project STM32F767XX_drivers ****
+16:38:27 **** Incremental Build of configuration Debug for project STM32F767XX_drivers ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/007_SPI_Rx_Master_IT.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F767ZI -DSTM32F7 -DSTM32F767ZITx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/007_SPI_Rx_Master_IT.d" -MT"Src/007_SPI_Rx_Master_IT.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/007_SPI_Rx_Master_IT.o"
-../Src/007_SPI_Rx_Master_IT.c: In function 'main':
-../Src/007_SPI_Rx_Master_IT.c:155:63: warning: passing argument 2 of 'SPI_ReceiveDataIT' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-  155 |                         while ( SPI_ReceiveDataIT(&SPI2handle,&ReadByte,1) == SPI_RX_BSY );
-      |                                                               ^~~~~~~~~
-In file included from ../Src/007_SPI_Rx_Master_IT.c:20:
-D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_drivers/drivers/Inc/stm32f767xx_spi_driver.h:134:63: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'volatile char *'
-  134 | uint8_t SPI_ReceiveDataIT (SPI_Handle_t *pSPIHandle, uint8_t *pRxBuffer, uint32_t Len);
-      |                                                      ~~~~~~~~~^~~~~~~~~
+arm-none-eabi-gcc "../Src/0010_USART_Case_Arduino.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DSTM32 -DNUCLEO_F767ZI -DSTM32F7 -DSTM32F767ZITx -c -I../Inc -I"D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_drivers/drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/0010_USART_Case_Arduino.d" -MT"Src/0010_USART_Case_Arduino.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/0010_USART_Case_Arduino.o"
+../Src/0010_USART_Case_Arduino.c: In function 'main':
+../Src/0010_USART_Case_Arduino.c:126:60: warning: pointer targets in passing argument 2 of 'USART_ReceiveDataIT' differ in signedness [-Wpointer-sign]
+  126 |                 while ( USART_ReceiveDataIT(&usart3_handle,rx_buf,strlen(msg[cnt])) != USART_READY );
+      |                                                            ^~~~~~
+      |                                                            |
+      |                                                            char *
+In file included from ../Src/0010_USART_Case_Arduino.c:11:
+D:/Solomon/SelfLearning/Udemy/MCU/STM32F767XX_drivers/drivers/Inc/stm32f767xx_usart_driver.h:149:68: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  149 | uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle, uint8_t *pRxBuffer, uint32_t Len);
+      |                                                           ~~~~~~~~~^~~~~~~~~
 arm-none-eabi-gcc -o "STM32F767XX_drivers.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\Solomon\SelfLearning\Udemy\MCU\STM32F767XX_drivers\STM32F767ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F767XX_drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: STM32F767XX_drivers.elf
  
 arm-none-eabi-size  STM32F767XX_drivers.elf 
 arm-none-eabi-objdump -h -S STM32F767XX_drivers.elf  > "STM32F767XX_drivers.list"
    text	   data	    bss	    dec	    hex	filename
-  19468	    456	   2440	  22364	   575c	STM32F767XX_drivers.elf
+  20292	    488	   2968	  23748	   5cc4	STM32F767XX_drivers.elf
 Finished building: default.size.stdout
  
 Finished building: STM32F767XX_drivers.list
  
 
-13:56:56 Build Finished. 0 errors, 1 warnings. (took 955ms)
+16:38:28 Build Finished. 0 errors, 1 warnings. (took 1s.45ms)
 

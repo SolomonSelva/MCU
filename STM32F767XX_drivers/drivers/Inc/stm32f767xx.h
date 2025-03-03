@@ -246,6 +246,34 @@ typedef struct
 #define SPI5							((SPI_RegDef_t*)SPI5_BASEADDR)
 #define SPI6							((SPI_RegDef_t*)SPI6_BASEADDR)
 
+
+/* Peripheral register structure of USART */
+typedef struct
+{
+	__vo uint32_t CR1;
+	__vo uint32_t CR2;
+	__vo uint32_t CR3;
+	__vo uint32_t BRR;
+	__vo uint32_t GTPR;
+	__vo uint32_t RTOR;
+	__vo uint32_t RQR;
+	__vo uint32_t ISR;
+	__vo uint32_t ICR;
+	__vo uint32_t RDR;
+	__vo uint32_t TDR;
+
+}USART_RegDef_t;
+
+
+#define USART1							((USART_RegDef_t*)USART1_BASEADDR)
+#define USART2							((USART_RegDef_t*)USART2_BASEADDR)
+#define USART3							((USART_RegDef_t*)USART3_BASEADDR)
+#define UART4							((USART_RegDef_t*)UART4_BASEADDR)
+#define UART5							((USART_RegDef_t*)UART5_BASEADDR)
+#define USART6							((USART_RegDef_t*)USART6_BASEADDR)
+#define UART7							((USART_RegDef_t*)UART7_BASEADDR)
+#define UART8							((USART_RegDef_t*)UART8_BASEADDR)
+
 /* CLock enable macros for GPIO peripherals */
 
 #define GPIOA_PCLK_EN()					(RCC->AHB1ENR |= (1 << 0))
@@ -285,8 +313,8 @@ typedef struct
 #define UART4_PCLK_EN()						(RCC->APB1ENR |= (1 << 19))
 #define UART5_PCLK_EN()						(RCC->APB1ENR |= (1 << 20))
 #define USART6_PCLK_EN()					(RCC->APB2ENR |= (1 << 5))
-#define USART7_PCLK_EN()					(RCC->APB1ENR |= (1 << 30))
-#define USART8_PCLK_EN()					(RCC->APB1ENR |= (1 << 31))
+#define UART7_PCLK_EN()						(RCC->APB1ENR |= (1 << 30))
+#define UART8_PCLK_EN()						(RCC->APB1ENR |= (1 << 31))
 
 /* CLock enable macros for SYSCFG peripherals */
 
@@ -330,8 +358,8 @@ typedef struct
 #define UART4_PCLK_DI()						(RCC->APB1ENR &= ~(1 << 19))
 #define UART5_PCLK_DI()						(RCC->APB1ENR &= ~(1 << 20))
 #define USART6_PCLK_DI()					(RCC->APB2ENR &= ~(1 << 5))
-#define USART7_PCLK_DI()					(RCC->APB1ENR &= ~(1 << 30))
-#define USART8_PCLK_DI()					(RCC->APB1ENR &= ~(1 << 31))
+#define UART7_PCLK_DI()						(RCC->APB1ENR &= ~(1 << 30))
+#define UART8_PCLK_DI()						(RCC->APB1ENR &= ~(1 << 31))
 
 /* CLock disable macros for SYSCFG peripherals */
 
@@ -383,12 +411,22 @@ typedef struct
 #define IRQ_SPI5						85
 #define IRQ_SPI6						86
 
+#define IRQ_USART1						37
+#define IRQ_USART2						38
+#define IRQ_USART3						39
+#define IRQ_UART4						52
+#define IRQ_UART5						53
+#define IRQ_USART6						71
+#define IRQ_UART7						82
+#define IRQ_UART8						83
+
 
 /* Macros for IRQ priority */
 
 #define IRQ_PRIO_3						3
 #define IRQ_PRIO_14						14
 #define IRQ_PRIO_15						15
+#define IRQ_PRIO_46						46
 
 
 /* Generic Macros */
@@ -453,13 +491,84 @@ typedef struct
 #define SPIx_SR_FTLVL						11
 
 
-/* GPIO Port Reset macros */
-#define SPI1_REG_RST()					do { (RCC->APB2RSTR |= (1 << 12));	(RCC->AHB1RSTR &= ~(1 << 12));} while (0) // setting and resetting the bit.
+/* SPI Port Reset macros */
+#define SPI1_REG_RST()					do { (RCC->APB2RSTR |= (1 << 12));	(RCC->APB2RSTR &= ~(1 << 12));} while (0) // setting and resetting the bit.
 #define SPI2_REG_RST()					do { (RCC->APB1RSTR |= (1 << 14));	(RCC->APB1RSTR &= ~(1 << 14));} while (0)
 #define SPI3_REG_RST()					do { (RCC->APB1RSTR |= (1 << 15));	(RCC->APB1RSTR &= ~(1 << 15));} while (0)
 #define SPI4_REG_RST()					do { (RCC->APB2RSTR |= (1 << 13));	(RCC->APB2RSTR &= ~(1 << 13));} while (0)
 #define SPI5_REG_RST()					do { (RCC->APB2RSTR |= (1 << 20));	(RCC->APB2RSTR &= ~(1 << 20));} while (0)
 #define SPI6_REG_RST()					do { (RCC->APB2RSTR |= (1 << 21));	(RCC->APB2RSTR &= ~(1 << 21));} while (0)
+
+
+/* UART */
+
+/* USART Port Reset macros */
+#define USART1_REG_RST()					do { (RCC->APB2RSTR |= (1 << 4));	(RCC->APB2RSTR &= ~(1 << 4));} while (0) // setting and resetting the bit.
+#define USART2_REG_RST()					do { (RCC->APB1RSTR |= (1 << 17));	(RCC->APB1RSTR &= ~(1 << 17));} while (0)
+#define USART3_REG_RST()					do { (RCC->APB1RSTR |= (1 << 18));	(RCC->APB1RSTR &= ~(1 << 18));} while (0)
+#define UART4_REG_RST()						do { (RCC->APB1RSTR |= (1 << 19));	(RCC->APB1RSTR &= ~(1 << 19));} while (0)
+#define UART5_REG_RST()						do { (RCC->APB1RSTR |= (1 << 20));	(RCC->APB1RSTR &= ~(1 << 20));} while (0)
+#define USART6_REG_RST()					do { (RCC->APB2RSTR |= (1 << 6));	(RCC->APB2RSTR &= ~(1 << 6));} while (0)
+#define UART7_REG_RST()						do { (RCC->APB1RSTR |= (1 << 30));	(RCC->APB1RSTR &= ~(1 << 30));} while (0)
+#define UART8_REG_RST()						do { (RCC->APB1RSTR |= (1 << 31));	(RCC->APB1RSTR &= ~(1 << 31));} while (0)
+
+
+/* UART register Bits */
+
+// USART CR1 Register
+
+#define USARTx_CR1_UE						0
+#define USARTx_CR1_UESM						1
+#define USARTx_CR1_RE						2
+#define USARTx_CR1_TE						3
+#define USARTx_CR1_IDLEIE					4
+#define USARTx_CR1_RXNEIE					5
+#define USARTx_CR1_TCIE						6
+#define USARTx_CR1_TXEIE					7
+#define USARTx_CR1_PEIE						8
+#define USARTx_CR1_PS						9
+#define USARTx_CR1_PCE						10
+#define USARTx_CR1_M0						12
+#define USARTx_CR1_MME						13
+#define USARTx_CR1_OVER8					15
+#define USARTx_CR1_M1						28
+
+
+// USART CR2 Register
+
+
+#define USARTx_CR2_CPHA						9
+#define USARTx_CR2_CPOL						10
+#define USARTx_CR2_CLKEN					11
+#define USARTx_CR2_STOP						12
+#define USARTx_CR2_MSBFIRST					19
+#define USARTx_CR2_RTOEN					23
+
+//USART CR3 Register
+
+#define USARTx_CR3_EIE						0
+#define USARTx_CR3_RTSE						8
+#define USARTx_CR3_CTSE						9
+#define USARTx_CR3_CTSIE					10
+
+//USART BRR Register
+
+#define USARTx_BRR							0
+
+
+//USART ISR Register
+
+#define USARTx_ISR_PE						0
+#define USARTx_ISR_FE						1
+#define USARTx_ISR_NF						2
+#define USARTx_ISR_ORE						3
+#define USARTx_ISR_IDLE						4
+#define USARTx_ISR_RXNE						5
+#define USARTx_ISR_TC						6
+#define USARTx_ISR_TXE						7
+#define USARTx_ISR_CTS						10
+#define USARTx_ISR_BUSY						16
+
 
 
 

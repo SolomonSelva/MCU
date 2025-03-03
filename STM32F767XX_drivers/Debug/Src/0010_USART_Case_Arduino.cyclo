@@ -1,0 +1,7 @@
+../Src/0010_USART_Case_Arduino.c:33:6:USART3_Init	1
+../Src/0010_USART_Case_Arduino.c:45:6:USART3_GPIOInit	1
+../Src/0010_USART_Case_Arduino.c:64:6:GPIO_ButtonInit	1
+../Src/0010_USART_Case_Arduino.c:91:6:delay	2
+../Src/0010_USART_Case_Arduino.c:95:5:main	4
+../Src/0010_USART_Case_Arduino.c:156:6:USART3_IRQHandler	1
+../Src/0010_USART_Case_Arduino.c:165:6:USART_ApplicationEventCallback	2

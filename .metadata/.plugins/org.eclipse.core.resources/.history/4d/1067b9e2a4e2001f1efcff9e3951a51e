@@ -1,0 +1,96 @@
+/*
+ * 009_USART_TX_Arduino.c
+ *
+ *  Created on: Feb 4, 2025
+ *      Author: solom
+ */
+
+#include "stm32f767xx.h"
+#include "stm32f767xx_gpio_driver.h"
+#include "stm32f767xx_usart_driver.h"
+#include "string.h"
+
+char mesg[1024] = "UART Tx Testing .....\n\r";
+
+USART_Handle_t usart2_handle;
+
+void delay(void)
+{
+	for(uint32_t i = 0 ; i < 500000/2 ; i ++);
+}
+
+
+void USART2_Init(void)
+{
+	usart2_handle.pUSARTx = USART2;
+	usart2_handle.USART_Config.USART_Baud = USART_STD_BAUD_115200;
+	usart2_handle.USART_Config.USART_HWFlowControl = USART_HW_FLOW_CTRL_NONE;
+	usart2_handle.USART_Config.USART_Mode = USART_MODE_ONLY_TX;
+	usart2_handle.USART_Config.USART_NoOfStopBits = USART_STOPBITS_1;
+	usart2_handle.USART_Config.USART_ParityControl = USART_PARITY_DISABLE;
+	usart2_handle.USART_Config.USART_WordLength = USART_WORDLEN_8BITS;
+	USART_Init(&usart2_handle);
+}
+
+
+void USART2_GPIOInit (void)
+{
+	GPIO_Handle_t usart_gpios;
+
+	usart_gpios.pGPIOx = GPIOA;
+	usart_gpios.GPIOPinConfig.GPIO_PinAltFuncMode = 7;
+	usart_gpios.GPIOPinConfig.GPIO_PinMode = GPIO_MODE_AF;
+	usart_gpios.GPIOPinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+	usart_gpios.GPIOPinConfig.GPIO_PinPuPdControl = GPIO_PIN_PU;
+	usart_gpios.GPIOPinConfig.GPIO_PinSpeed = GPIO_SPEED_HIGH;
+
+	usart_gpios.GPIOPinConfig.GPIO_PinNumber = GPIO_PIN_2;
+	GPIO_Init(&usart_gpios);
+
+	usart_gpios.GPIOPinConfig.GPIO_PinNumber = GPIO_PIN_3;
+	GPIO_Init(&usart_gpios);
+}
+
+void GPIO_Button_Init()
+{
+	GPIO_Handle_t GpioButton;
+
+	GpioButton.pGPIOx = GPIOC;
+	/* Button config */
+
+	GpioButton.GPIOPinConfig.GPIO_PinNumber = GPIO_PIN_13;
+
+	GpioButton.GPIOPinConfig.GPIO_PinMode = GPIO_MODE_IN;
+
+	GpioButton.GPIOPinConfig.GPIO_PinSpeed = GPIO_SPEED_HIGH;
+
+	//GpioButton.GPIOPinConfig.GPIO_PinOPType = GPIO_OP_TYPE_PP;
+
+	GpioButton.GPIOPinConfig.GPIO_PinPuPdControl  = GPIO_NO_PP;
+
+	GPIO_PeriClkControl(GPIOC, ENABLE);
+
+	GPIO_Init(&GpioButton);
+}
+
+int main (void)
+{
+	GPIO_Button_Init();
+
+	USART2_GPIOInit();
+
+	USART2_Init();
+
+	USART_PeripheralControl(USART2, ENABLE);
+
+	while (1)
+	{
+		while (! GPIO_ReadFromInputPin(GPIOC, GPIO_PIN_13));
+
+		delay()
+
+		USART_SendData(&usart2_handle, (uint8_t*)mesg, strlen(mesg));
+	}
+
+	return 0;
+}
